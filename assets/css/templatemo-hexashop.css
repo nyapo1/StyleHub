@@ -1,10 +1,4 @@
-/*
 
-TemplateMo 571 Hexashop
-
-https://templatemo.com/tm-571-hexashop
-
-*/
 
 /* ---------------------------------------------
 Table of contents
@@ -779,7 +773,7 @@ Men
 
 #men .item .down-content {
   padding-top: 30px;
-  position: relative;
+  position: relative; /* Keep this if you need stacking context */
   z-index: 3;
   background-color: #fff;
 }
@@ -799,14 +793,15 @@ Men
 }
 
 #men .item .down-content ul.stars {
-  position: absolute;
-  right: 0;
-  top: 30px;
+  padding-left: 0; /* Remove default padding */
+  margin-top: 8px; /* Space above stars */
+  list-style-type: none; /* Remove bullet points */
 }
 
 #men .item .down-content ul.stars li {
-  display: inline;
+  display: inline; /* Keep stars in a horizontal line */
   font-size: 13px;
+  margin-right: 2px; /* Space between stars */
 }
 
 #men .item .thumb .hover-content {
@@ -940,7 +935,7 @@ Women
 
 #women .item .down-content {
   padding-top: 30px;
-  position: relative;
+  position: relative; /* Keep this if you need stacking context */
   z-index: 3;
   background-color: #fff;
 }
@@ -960,14 +955,15 @@ Women
 }
 
 #women .item .down-content ul.stars {
-  position: absolute;
-  right: 0;
-  top: 30px;
+  padding-left: 0; /* Remove default padding */
+  margin-top: 8px; /* Space above stars */
+  list-style-type: none; /* Remove bullet points */
 }
 
 #women .item .down-content ul.stars li {
-  display: inline;
+  display: inline; /* Keep stars in a horizontal line */
   font-size: 13px;
+  margin-right: 2px; /* Space between stars */
 }
 
 #women .item .thumb .hover-content {
@@ -1088,6 +1084,168 @@ Kids
 ---------------------------------------------
 */
 
+#accessories {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  border-bottom: 3px dotted #eee;
+}
+
+#accessories .section-heading {
+  margin-bottom: 60px;
+}
+
+#accessories .item .down-content {
+  padding-top: 30px;
+  position: relative; /* Keep this if you need stacking context */
+  z-index: 3;
+  background-color: #fff;
+}
+
+#accessories .item .down-content h4 {
+  font-size: 22px;
+  color: #2a2a2a;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+#accessories .item .down-content span {
+  font-size: 18px;
+  color: #a1a1a1;
+  font-weight: 500;
+  display: block;
+}
+
+#accessories .item .down-content ul.stars {
+  padding-left: 0; /* Remove default padding */
+  margin-top: 8px; /* Space above stars */
+  list-style-type: none; /* Remove bullet points */
+}
+
+#accessories .item .down-content ul.stars li {
+  display: inline; /* Keep stars in a horizontal line */
+  font-size: 13px;
+  margin-right: 2px; /* Space between stars */
+}
+
+#accessories .item .thumb .hover-content {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  bottom: -60px;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s;
+}
+
+#accessories .item .thumb:hover .hover-content {
+  bottom: 30px;
+  opacity: 1;
+  visibility: visible;
+}
+
+#accessories .item .thumb {
+  position: relative;
+}
+
+#accessories .item .thumb .hover-content ul li {
+  display: inline;
+  margin: 0px 10px;
+}
+
+#accessories .item .thumb .hover-content ul li a {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  display: inline-block;
+  color: #2a2a2a;
+  background-color: #fff;
+}
+
+
+#accessories .owl-nav {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  transform: translateY(-25px);
+}
+
+#accessories .owl-dots {
+  display: none;
+}
+    
+#accessories .owl-nav .owl-prev{
+  position: absolute;
+  left: -80px;
+  outline: none;
+}
+
+#accessories .owl-nav .owl-prev span,
+#accessories .owl-nav .owl-next span {
+  opacity: 0;
+}
+
+#accessories .owl-nav .owl-prev:before {
+  display: inline-block;
+  font-family: 'FontAwesome';
+  color: #2a2a2a;
+  font-size: 25px;
+  font-weight: 700;
+  content: '\f104';
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  line-height: 48px;
+  border :1px solid #2a2a2a;
+}
+
+#accessories .owl-nav .owl-prev {
+  opacity: 0.75;
+  transition: all .5s;
+}
+
+#accessories .owl-nav .owl-prev:hover {
+  opacity: 1;
+}
+
+#accessories .owl-nav .owl-next {
+  opacity: 0.75;
+  transition: all .5s;
+}
+
+#accessories .owl-nav .owl-next:hover {
+  opacity: 1;
+}
+
+#accessories .owl-nav .owl-next{
+  outline: none;
+  position: absolute;
+  right: -85px;
+}
+
+#accessories .owl-nav .owl-next:before {
+  display: inline-block;
+  font-family: 'FontAwesome';
+  color: #2a2a2a;
+  font-size: 25px;
+  font-weight: 700;
+  content: '\f105';
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  line-height: 48px;
+  border :1px solid #2a2a2a;
+}
+
+
+/*
+---------------------------------------------
+Kids
+---------------------------------------------
+*/
+
 #kids {
   padding-top: 90px;
   padding-bottom: 90px;
@@ -1097,7 +1255,6 @@ Kids
 #kids .section-heading {
   margin-bottom: 60px;
 }
-
 #kids .item .down-content {
   padding-top: 30px;
   position: relative;
@@ -1120,16 +1277,16 @@ Kids
 }
 
 #kids .item .down-content ul.stars {
-  position: absolute;
-  right: 0;
-  top: 30px;
+  padding-left: 0; /* Remove default padding */
+  margin-top: 8px; /* Space above stars */
+  list-style-type: none; /* Remove bullet points */
 }
 
 #kids .item .down-content ul.stars li {
-  display: inline;
+  display: inline-block; /* Keep stars in a horizontal line */
   font-size: 13px;
+  margin-right: 2px; /* Space between stars */
 }
-
 #kids .item .thumb .hover-content {
   position: absolute;
   z-index: 2;
@@ -1241,7 +1398,6 @@ Kids
   line-height: 48px;
   border :1px solid #2a2a2a;
 }
-
 
 /*
 ---------------------------------------------
