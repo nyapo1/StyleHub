@@ -458,6 +458,26 @@ header
   content: "";
 }
 
+.cart-icon{
+  font-size: 3rem;
+}
+/* CSS for Hover Effect on Cart Icon */
+.cart-icon {
+  display: inline-block;
+  position: relative;
+}
+
+.cart-icon:hover {
+  border: 2px solid black; /* Black border when hovering */
+  border-radius: 10%; /* Optional: Round the border for a circular effect */
+  padding:0px 30px; /* Optional: Add padding for spacing */
+}
+.custom-badge {
+  font-size: 1.5rem; /* Increase font size */
+  width: 3rem; /* Adjust width */
+  height: 2.5rem; /* Adjust height */
+  line-height: 2rem; /* Center the text vertically */
+}
 .header-area .main-nav .menu-trigger span {
   top: 16px;
 }
